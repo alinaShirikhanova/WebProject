@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Главная</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tours.html">Туры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">О нас</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="container">
+        <img id="image" src="img/1.PNG" alt="">
+        <br>
+        <a onlick="setImage('1.PNG')" class="btn btn-primary">1</a>
+        <a onlick="setImage('2.PNG')" class="btn btn-primary">2</a>
+        <a onlick="setImage('3.PNG')" class="btn btn-primary">3</a>
+    </div> -->
+
+    <div class="container">
+        <div class="slider">
+            <p class="txt">Мальдивы</p>
+            <img id="image" src="img/1.PNG" alt="">
+            <br>
+            <a onclick="setImage('1.PNG', 'Мальдивы')" class="btn btn-warning">1</a>
+            <a onclick="setImage('2.PNG', 'Курильские острова')" class="btn btn-warning">2</a>
+            <a onclick="setImage('3.PNG', 'Доминиканские острова')" class="btn btn-warning">3</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <form id="form" action="#">
+            <div>
+                <h2>Выберите пакет</h2>
+                <div onclick="showPrice('optionPrice','20 000')">
+                    <input name="option" type="radio" id="half" value="20000">
+                    <label for="half">Неполный пакет</label>
+                </div>
+                <div onclick="showPrice('optionPrice', '70 000')">
+                    <input name="option" type="radio" id="full" value="70000">
+                    <label for="full">Полный пакет</label>
+                </div>
+                <p><b><span id="optionPrice">0</span></b> рублей</p>
+            </div>
+            <br>
+            <div>
+                <h2>Выберите тур</h2>
+                <div onclick="showPrice('tour', '200 000')">
+                    <input name="tour" type="radio" id="mexico" value="200000">
+                    <label for="mexico">Мексика</label>
+                </div>
+                <div onclick="showPrice('tour','300 000')">
+                    <input name="tour" type="radio" id="australia" value="300000">
+                    <label for="australia">Австралия</label>
+                </div>
+                <div onclick="showPrice('tour','500 000')">
+                    <input name="tour" type="radio" id="alaska" value="500000">
+                    <label for="alaska">Аляска</label>
+                </div>
+                <p><b><span id="tour">0</span></b> рублей</p>
+                <button onclick="sum()" type="button">Посчитать</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- GET -->
+    <!-- POST -->
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
